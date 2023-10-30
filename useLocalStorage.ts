@@ -1,5 +1,14 @@
 import { useEffect, useState } from 'react';
-import isJsonString from 'utils/isJsonString';
+
+
+export function isJsonString(str: any) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
 
 const UPDATE_STORAGE_EVENT = 'UPDATE_STORAGE_EVENT';
 
