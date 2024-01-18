@@ -1,3 +1,4 @@
+// Time complexity - O(n log n) -> O(n^2)
 function quickSort(array) {
     if (array.length < 2) {
         return array;
