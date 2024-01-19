@@ -1,1 +1,1 @@
-A repository where I store useful hooks, utilities, and practice algorithms
+The draft was created while reading the book "Grokking Algorithms. An Illustrated Guide for Programmers and Other Curious"
