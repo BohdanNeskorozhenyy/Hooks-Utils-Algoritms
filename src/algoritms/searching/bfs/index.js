@@ -1,7 +1,7 @@
 function personIsSeller(person) {
     return person?.isSeller; // check if person is a mango seller
 }
-
+// O(V + E) === 16 (vertices + edges (8 + 8))
 function findMangoSeller(graph, start) {
     let searchQueue = [];
     searchQueue = searchQueue.concat(graph[start]); // add start person to queue
