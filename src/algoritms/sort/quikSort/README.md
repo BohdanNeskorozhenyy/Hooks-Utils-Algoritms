@@ -1,3 +1,5 @@
+## Quick Sort
+
 | Operation      | Time Complexity |
 |-----------------|-----------------|
 | QuickSort       | O(n log n)       |
