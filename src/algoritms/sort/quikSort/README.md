@@ -14,3 +14,6 @@ The key to its efficiency lies in the partitioning step, which allows it to sort
 However, it's important to note that the worst-case time complexity of QuickSort is O(n^2), 
 which occurs when the pivot selection strategy leads to unbalanced partitioning. 
 Nevertheless, QuickSort is often preferred in practice due to its average-case performance and the ability to implement optimizations, such as randomized pivot selection, to mitigate worst-case scenarios.
+
+
+![QuickSort](https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/c0373b8d-a247-47a7-88f8-621993a24c29)
