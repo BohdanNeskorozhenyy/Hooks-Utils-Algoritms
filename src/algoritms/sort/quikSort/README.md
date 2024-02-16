@@ -4,8 +4,6 @@
 |-----------------|-----------------|
 | QuickSort       | O(n log n)       |
 
-DESCRIPTION
-
 QuickSort is a divide-and-conquer sorting algorithm that efficiently sorts an array or list by partitioning it into smaller sub-arrays. 
 The algorithm works by selecting a pivot element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. 
 The sub-arrays are then recursively sorted. This process is repeated until the entire array is sorted.
