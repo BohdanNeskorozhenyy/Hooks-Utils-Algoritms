@@ -1,3 +1,5 @@
+## Selection Sort
+
 | Operation      | Time Complexity |
 |-----------------|-----------------|
 | findSmallest    | O(n)            |
