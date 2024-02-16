@@ -5,7 +5,7 @@
 | findSmallest    | O(n)            |
 | selectionSort   | O(n^2)           |
 
-DESCRIPTION
+DESCRIPTION 
 Selection Sort is a simple sorting algorithm that divides the array into a sorted and an unsorted region. 
 The algorithm repeatedly selects the smallest (or largest, depending on the desired order) element from the unsorted region and swaps it with the first element of the unsorted region. 
 This process is repeated until the entire array is sorted. 
