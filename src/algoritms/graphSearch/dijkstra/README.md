@@ -1,3 +1,5 @@
+## Dijkstra's algorithm
+
 | Operation      | Time Complexity |
 |-----------------|-----------------|
 | Dijkstra's Algorithm|O((V + E) log V)|
