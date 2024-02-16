@@ -1,3 +1,5 @@
+## Binary Search
+
 | Operation      | Time Complexity |
 |-----------------|-----------------|
 | Binary Search   | O(log n)        |
