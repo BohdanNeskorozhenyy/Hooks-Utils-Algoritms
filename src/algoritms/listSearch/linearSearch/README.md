@@ -1,3 +1,5 @@
+## Linear search
+
 | Operation      | Time Complexity |
 |-----------------|-----------------|
 | Linear Search   | O(n)        |
