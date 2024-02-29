@@ -28,7 +28,7 @@ This simplification in analysis allows focusing on the most significant factor a
 
 #### Logarithm 
 in algoritms `base` always is 2 (`log(n)`)
-becouse `base` is a constant and we know than **Constants don't matter**
+because `base` is a constant and we know than **Constants don't matter**
 
 
 ![62](https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/4b519616-bcab-4a29-9021-fd944f45ee26)
