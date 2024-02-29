@@ -27,6 +27,7 @@ This simplification in analysis allows focusing on the most significant factor a
 - Reference types generally **O(n)**, where **n** is the **length** (for arrays) or the **number of keys** (for object)
 
 #### Logarithm
+**`log2(value) = exponent` implies that `2^exponent = value`**
 ![logarithms](https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/a30ef30e-63fb-455f-8f5a-1fa31b83afe8)
 
 
