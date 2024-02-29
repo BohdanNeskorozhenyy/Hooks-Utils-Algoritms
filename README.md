@@ -1,7 +1,7 @@
 ## The draft was created while reading the book "Grokking Algorithms. An Illustrated Guide for Programmers and Other Curious"
 
 ### Big O
-#### Constants don't matter rule
+#### Constants don't matter
 
 The principle that constants in the Big O notation don't matter focuses on the growth rate of an algorithm's execution time as the size of its input increases, disregarding constant factors and lower-order terms. Here are some examples illustrating this principle:
 
@@ -19,4 +19,12 @@ The principle that constants in the Big O notation don't matter focuses on the g
   - Explanation: The cubic term n^3 dominates over the quadratic term n^2; constants and coefficients are ignored.
 
 This simplification in analysis allows focusing on the most significant factor affecting the algorithm's scalability and performance.
+
+#### Space Complexity
+
+- **Most primitives (boolean, numbers, undefined, null) are constant space**
+- **Strings require O(n) space (where n is the string lingth)**
+- **Reference types generally O(n), where n is the length (for arrays) or the number of keys (for object)**
+
+
 
