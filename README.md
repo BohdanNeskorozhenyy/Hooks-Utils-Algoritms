@@ -22,9 +22,9 @@ This simplification in analysis allows focusing on the most significant factor a
 
 #### Space Complexity
 
-- Most primitives (boolean, numbers, undefined, null) are constant space
-- Strings require O(n) space (where n is the string lingth)
-- Reference types generally O(n), where n is the length (for arrays) or the number of keys (for object)
+- Most primitives **(boolean, numbers, undefined, null)** are constant space
+- Strings require **O(n)** space (where n is the string length)
+- Reference types generally **O(n)**, where **n** is the **length** (for arrays) or the **number of keys** (for object)
 
 
 
