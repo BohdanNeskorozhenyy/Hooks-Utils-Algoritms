@@ -1,8 +1,7 @@
 ## The draft was created while reading the book "Grokking Algorithms. An Illustrated Guide for Programmers and Other Curious"
 
 ## Big O
-
-### constants don't matter rule
+### Constants don't matter rule
 
 The principle that constants in the Big O notation don't matter focuses on the growth rate of an algorithm's execution time as the size of its input increases, disregarding constant factors and lower-order terms. Here are some examples illustrating this principle:
 
