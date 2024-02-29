@@ -26,5 +26,11 @@ This simplification in analysis allows focusing on the most significant factor a
 - Strings require **O(n)** space (where n is the string length)
 - Reference types generally **O(n)**, where **n** is the **length** (for arrays) or the **number of keys** (for object)
 
+#### logarithms (draft ex)
+![logarithms](https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/a30ef30e-63fb-455f-8f5a-1fa31b83afe8)
+
+
+
+
 
 
