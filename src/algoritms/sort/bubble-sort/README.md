@@ -13,7 +13,7 @@ This algorithm is named "Bubble Sort" because during each iteration, larger elem
 If an array is almost sorted, the bubble sort algorithm can have better performance because it will simply traverse the array without making any changes if no exchanges occur during the first iteration. This leads to a time complexity of approximately O(n) for already sorted data.
 
 
-![bubble-sort](https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/4ebf6af0-1638-430e-9dec-f8706c1f852e)
+![bubble-sort](https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/e25f9e87-b5d5-4a30-8c61-2ab3348ebf15)
 
 
 
