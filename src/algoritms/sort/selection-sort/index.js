@@ -1,29 +1,22 @@
-const numbersArr = [9,2,4,5,7,8,1];
+const swap = (arr, i, min) => {
+    if (i !== min) {
+        let cur = arr[i];
+        arr[i] = arr[min];
+        arr[min] = cur;
+    }
+}
 
-// Time complexity - O(n^2)
-function findSmallest(arr) {
-    let smallest = arr[0];
-    let smallestIndex = 0;
+const selectionSort = arr => { 
+    let min = 0;
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < smallest) {
-            smallest = arr[i];
-            smallestIndex = i;
+        for (let j = i + 1; j < arr.length; j++){
+            if(arr[j] < arr[min]) {
+                min = j;
+            }
         }
+        swap(arr, i, min);
     }
-    return smallestIndex;
+    return arr;
 }
 
-// Time complexity - O(n^2)
-function selectionSort(arr) {
-    let mutableArr = [...arr];
-    const newArr = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        const smallestIndex = findSmallest(mutableArr);
-        newArr.push(mutableArr[smallestIndex]);
-        mutableArr.splice(smallestIndex, 1);
-    }
-    return newArr;
-}
-
-console.log(selectionSort(numbersArr))
+selectionSort([34,22,10,19,17])
