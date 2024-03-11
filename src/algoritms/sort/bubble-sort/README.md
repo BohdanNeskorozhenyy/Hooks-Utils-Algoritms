@@ -1,3 +1,5 @@
+## Bubble Sort
+
 | Operation      | Time Complexity |
 |-----------------|-----------------|
 | Bubble Sort       |  O(n^2)       |
