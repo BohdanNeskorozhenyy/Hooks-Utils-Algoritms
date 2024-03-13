@@ -1,7 +1,5 @@
 ## Binary Search
 
-## Binary Search
-
 | Complexity | Big O        |
 | ---------- | ------------ |
 | Average    | O(log n)     |
