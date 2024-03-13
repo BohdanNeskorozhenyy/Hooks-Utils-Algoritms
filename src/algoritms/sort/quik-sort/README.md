@@ -1,8 +1,12 @@
 ## Quick Sort
 
-| Operation      | Time Complexity |
-|-----------------|-----------------|
-| QuickSort       | O(n log n)       |
+| Complexity | Big O        |
+| ---------- | ------------ |
+| Average    | O(n log n)   |
+| Best       | O(n log n)   |
+| Worst      | O(n^2)       |
+| Space      | O(log n)     |
+
 
 QuickSort is a divide-and-conquer sorting algorithm that efficiently sorts an array or list by partitioning it into smaller sub-arrays. 
 The algorithm works by selecting a pivot element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. 
