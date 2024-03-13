@@ -1,8 +1,14 @@
 ## Binary Search
 
-| Operation      | Time Complexity |
-|-----------------|-----------------|
-| Binary Search   | O(log n)        |
+## Binary Search
+
+| Complexity | Big O        |
+| ---------- | ------------ |
+| Average    | O(log n)     |
+| Best       | O(1)         |
+| Worst      | O(log n)     |
+| Space      | O(1)         |
+
 
 
 Binary Search is a divide-and-conquer algorithm used to efficiently locate a target element within a sorted array. 
