@@ -1,8 +1,11 @@
 ## Bubble Sort
 
-| Operation      | Time Complexity | Space Complexity |
-|----------------|-----------------|------------------|
-| Bubble Sort    |  O(n^2)         | O(1)             |
+| Complexity | Big O        |
+| ---------- | ------------ |
+| Average    | O(n^2)       |
+| Best       | O(n)         |
+| Worst      | O(n^2)       |
+| Space      | O(1)         |
 
 
 
