@@ -1,9 +1,12 @@
 ## Selection Sort
 
-| Operation      | Time Complexity | Space Complexity |
-|----------------|-----------------|------------------|
-| findSmallest   | O(n)            | O(n)            
-| selectionSort  | O(n^2)          | O(1)             |
+| Complexity | Big O        |
+| ---------- | ------------ |
+| Average    | O(n^2)       |
+| Best       | O(n^2)       |
+| Worst      | O(n^2)       |
+| Space      | O(1)         |
+
 
 Selection Sort is a simple sorting algorithm that divides the array into a sorted and an unsorted region. 
 The algorithm repeatedly selects the smallest (or largest, depending on the desired order) element from the unsorted region and swaps it with the first element of the unsorted region. 
