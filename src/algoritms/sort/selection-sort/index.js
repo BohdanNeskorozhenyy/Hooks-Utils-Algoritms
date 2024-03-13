@@ -6,11 +6,12 @@ const swap = (arr, i, min) => {
     }
 }
 
-const selectionSort = arr => { 
+const selectionSort = (arr, comparator = (a,b) => a - b) => { 
     let min = 0;
     for (let i = 0; i < arr.length; i++) {
+        min = i; // reset min to the current index
         for (let j = i + 1; j < arr.length; j++){
-            if(arr[j] < arr[min]) {
+            if(comparator(arr[j], arr[min]) < 0) {
                 min = j;
             }
         }
@@ -19,4 +20,4 @@ const selectionSort = arr => {
     return arr;
 }
 
-selectionSort([34,22,10,19,17])
+selectionSort([34,22,10,19,17]);
