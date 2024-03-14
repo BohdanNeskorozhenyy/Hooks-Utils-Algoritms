@@ -1,11 +1,11 @@
-const swap = (arr, a, b) => {
+const swap = <T>(arr: T[], a: number, b: number) => {
     const temp = arr[a];
     arr[a] = arr[b];
     arr[b] = temp;
 };
 
-const bubbleSort = (arr, comparator = (a, b) => a - b) => {
-    let noSwaps;
+const bubbleSort = <T>(arr: T[], comparator: (a: T, b: T) => number) => {
+    let noSwaps = false;
     for (let i = arr.length; i > 0; i--) {
         noSwaps = true;
         for (let j = 0; j < i  - 1; j++) {
@@ -18,5 +18,3 @@ const bubbleSort = (arr, comparator = (a, b) => a - b) => {
     }
     return arr;
 }
-
-bubbleSort([8,3,5,2,4,7,6], (a, b) => b - a);

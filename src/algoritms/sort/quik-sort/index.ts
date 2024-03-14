@@ -1,5 +1,5 @@
-function pivot(arr, start = 0, end = arr.length - 1, comparator) {
-    const swap = (arr, idx1, idx2) => {
+function pivot<T>(arr: T[], start = 0, end = arr.length - 1, comparator: (a: T, b: T) => number) {
+    const swap = (arr: T[], idx1: number, idx2: number) => {
       [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
     };
   
@@ -18,7 +18,7 @@ function pivot(arr, start = 0, end = arr.length - 1, comparator) {
   }
   
   
-  function quickSort(arr, comparator = (a, b) => a - b, left = 0, right = arr.length -1){
+  function quickSort<T>(arr: T[], comparator: (a: T, b: T) => number, left = 0, right = arr.length -1){
       if(left < right){
           let pivotIndex = pivot(arr, left, right, comparator)
           //left
@@ -28,5 +28,3 @@ function pivot(arr, start = 0, end = arr.length - 1, comparator) {
         }
        return arr;
   } 
-             
-  quickSort([100,-3,2,4,6,9,1,2,5,3,23], (a, b) => b - a)
