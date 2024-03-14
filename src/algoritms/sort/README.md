@@ -4,7 +4,7 @@
 | Execution Place   | In-place   | Requires extra memory | In-place         | In-place          | In-place          |
 | Average           | O(n log n) | O(n log n)          | O(n^2)            | O(n^2)            | O(n^2)            |
 | Best              | O(n log n) | O(n log n)          | O(n^2)            | O(n)              | O(n)              |
-| Worst             | O(n^2)     | O(n)                | O(n^2)            | O(n)              | O(1)              |
+| Worst             | O(n^2)     | O(n log n)          | O(n^2)            | O(n^2)            | O(n^2)              |
 | Space             | O(log n)   | O(n)                | O(1)              | O(1)              | O(1)              |
 | Best Used For     | Large datasets where speed is crucial and possible minimal use of additional memory | Large datasets that do not fit in memory, or when sorting stability is required | Small arrays where simplicity of implementation is favored over efficiency | Small datasets or when data is already nearly sorted. Easy to implement | Small or nearly sorted datasets, where simplicity is preferred, and for partially ordered data |
 
