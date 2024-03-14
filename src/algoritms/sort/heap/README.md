@@ -11,4 +11,5 @@ Heap sort is a comparison-based sorting algorithm that works by first building a
 
 
 
-![Uploading heap-sort.gif…]()
+
+![heap-sort](https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/38829ce0-637f-41a6-a801-8b472eb7eb3f)
