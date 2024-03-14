@@ -2,8 +2,8 @@
 
 | Complexity | Big O       |
 | -----------| ------------|
-| Average | θ(n \* log(n)) |
-| Best    | Ω(n \* log(n)) |
+| Average | O(n \* log(n)) |
+| Best    | O(n \* log(n)) |
 | Worst   | O(n \* log(n)) |
 | Space   | O(1)           |
 
