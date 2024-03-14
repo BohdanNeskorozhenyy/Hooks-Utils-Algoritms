@@ -8,7 +8,7 @@ graph.e = { f: 1 }
 graph.f = { g: 1 }
 graph.g = {}
 
-const findNodeLowestCost = (costs, processed) => {
+function findNodeLowestCost(costs, processed) {
     let lowestCost = Infinity;
     let lowestNode;
 
@@ -23,7 +23,7 @@ const findNodeLowestCost = (costs, processed) => {
     return lowestNode;
 }
 
-const shortPath = (qraph, start, end) => {
+function shortPath(qraph, start, end) {
     const costs = {}; // shortest ways
     const processed = []; 
     let neighbors = {};

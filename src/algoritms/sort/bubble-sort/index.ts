@@ -1,10 +1,10 @@
-const swap = <T>(arr: T[], a: number, b: number) => {
+function swap<T>(arr: T[], a: number, b: number) {
     const temp = arr[a];
     arr[a] = arr[b];
     arr[b] = temp;
 };
 
-const bubbleSort = <T>(arr: T[], comparator: (a: T, b: T) => number) => {
+function bubbleSort<T>(arr: T[], comparator: (a: T, b: T) => number) {
     let noSwaps = false;
     for (let i = arr.length; i > 0; i--) {
         noSwaps = true;
@@ -18,3 +18,5 @@ const bubbleSort = <T>(arr: T[], comparator: (a: T, b: T) => number) => {
     }
     return arr;
 }
+
+export default  bubbleSort;

@@ -1,4 +1,4 @@
-const swap = <T>(arr: T[], i: number, min: number) => {
+function swap<T>(arr: T[], i: number, min: number) {
     if (i !== min) {
         let cur = arr[i];
         arr[i] = arr[min];
@@ -6,7 +6,7 @@ const swap = <T>(arr: T[], i: number, min: number) => {
     }
 }
 
-const selectionSort = <T>(arr: T[], comparator : (a: T, b: T) => number) => { 
+function selectionSort<T>(arr: T[], comparator : (a: T, b: T) => number){ 
     let min = 0;
     for (let i = 0; i < arr.length; i++) {
         min = i; // reset min to the current index

@@ -1,5 +1,5 @@
 
-const merge = <T>(arr1: T[], arr2: T[], comparator: (a: T, b: T) => number) => {
+function merge<T>(arr1: T[], arr2: T[], comparator: (a: T, b: T) => number) {
     const result: T[] = [];
     let i = 0, j = 0;
 
@@ -25,7 +25,7 @@ const merge = <T>(arr1: T[], arr2: T[], comparator: (a: T, b: T) => number) => {
     return result;
 }
 
-const mergeSort = <T>(arr: T[], comparator: (a: T, b: T) => number): T[] => {
+function mergeSort<T>(arr: T[], comparator: (a: T, b: T) => number): T[] {
     if (arr.length <= 1) return arr;
     const middle = Math.floor(arr.length / 2);
     const left = mergeSort(arr.slice(0, middle), comparator);
