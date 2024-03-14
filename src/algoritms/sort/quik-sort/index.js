@@ -1,20 +1,32 @@
-function quickSort(array, comparator = (a, b) => a - b) {
-    if (array.length < 2) {
-        return array;
-    } else {
-        const pivot = array[0];
-        const less = [];
-        const greater = []
-        for(let i = 0; i < array.length; i++) {
-            if (comparator(array[i], pivot) < 0){
-                less.push(array[i]);
-            }
-            if (comparator(array[i], pivot) > 0){
-                greater.push(array[i]);
-            }
-        }
-        return ([ ...quickSort(less, comparator), pivot, ...quickSort(greater, comparator) ])
+function pivot(arr, start = 0, end = arr.length - 1, comparator) {
+    const swap = (arr, idx1, idx2) => {
+      [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+    };
+  
+    let pivot = arr[start];
+    let swapIdx = start;
+  
+    for (let i = start + 1; i <= end; i++) {
+      if (comparator(pivot, arr[i]) > 0) {
+        swapIdx++;
+        swap(arr, swapIdx, i);
+      }
     }
-}
-
-quickSort([9,2,7,8,4,5,3,2,6,1], (a, b) => b - a);
+  
+    swap(arr, start, swapIdx);
+    return swapIdx;
+  }
+  
+  
+  function quickSort(arr, comparator = (a, b) => a - b, left = 0, right = arr.length -1){
+      if(left < right){
+          let pivotIndex = pivot(arr, left, right, comparator)
+          //left
+          quickSort(arr, comparator, left, pivotIndex - 1);
+          //right
+          quickSort(arr, comparator, pivotIndex + 1, right);
+        }
+       return arr;
+  } 
+             
+  quickSort([100,-3,2,4,6,9,1,2,5,3,23], (a, b) => b - a)
