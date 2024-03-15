@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+	"watch": "jest --watch"
   },
   "dependencies": {
 		"@types/jest": "^28.1.5",

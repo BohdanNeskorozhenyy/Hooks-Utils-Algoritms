@@ -33,4 +33,4 @@ function mergeSort<T>(arr: T[], comparator: (a: T, b: T) => number): T[] {
     return merge(left, right, comparator);
 }
 
-mergeSort([9,7,8,4,5,3,2,6,1], (a, b) => a - b)
+export default mergeSort;

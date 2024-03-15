@@ -8,3 +8,5 @@ function insertionSort<T>(arr: T[], comparator: (a: T, b: T) => number) {
     }
     return arr;
 }
+
+export default insertionSort

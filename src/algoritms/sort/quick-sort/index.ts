@@ -28,3 +28,5 @@ function pivot<T>(arr: T[], start = 0, end = arr.length - 1, comparator: (a: T, 
         }
        return arr;
   } 
+
+  export default quickSort;
