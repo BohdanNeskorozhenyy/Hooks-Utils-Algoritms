@@ -15,6 +15,8 @@ A Singly Linked List is a fundamental data structure in computer science used to
 - **Nodes**: Each node contains two fields: the data, which stores the element, and a pointer/reference to the next node in the sequence.
   
 - **Head**: The first node of the linked list is called the head. It is the entry point for accessing elements in the list.
+
+- **Tail**: The last node of the linked list is called the tail. It is the entry point for accessing elements in the list.
   
 - **Traversal**: To traverse the list, you start from the head and follow the next pointers until you reach the end (null).
 
