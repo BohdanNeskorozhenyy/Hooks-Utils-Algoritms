@@ -10,6 +10,8 @@
 
 A Singly Linked List is a fundamental data structure in computer science used to store a sequence of elements. Each element, called a node, consists of two parts: the data itself, and a reference (or link) to the next node in the sequence. The last node typically points to null, indicating the end of the list.
 
+<img width="728" alt="Screenshot 2024-03-21 at 09 18 27" src="https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/2bea539a-7cbe-4bb7-b040-5032ed8d0534">
+
 ## Key Features
 
 - **Nodes**: Each node contains two fields: the data, which stores the element, and a pointer/reference to the next node in the sequence.
@@ -31,4 +33,5 @@ A Singly Linked List is a fundamental data structure in computer science used to
 ## Usage
 
 Singly Linked Lists are commonly used in scenarios where dynamic size, efficient insertion/deletion at the beginning, and sequential access are important considerations. They are used in various applications, including implementing stacks, queues, and adjacency lists for graphs, among others.
+
 
