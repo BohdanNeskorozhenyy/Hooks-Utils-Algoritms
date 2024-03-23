@@ -5,11 +5,15 @@ class _Node<T> {
     ){}
 }
 class SinglyLinkedList<T> {
-    constructor(
-        public length: number,
-        public head: _Node<T> | null,
-        public tail: _Node<T> | null
-    ){}
+    public head: _Node<T> | null = null;
+	public tail: _Node<T> | null = null;
+	public length = 0;
+
+	constructor(array?: T[]) {
+		if (array) {
+			this.fromArray(array);
+		}
+	}
 
     push(val: T) {
         this.length++;
@@ -125,4 +129,23 @@ class SinglyLinkedList<T> {
         }
         return this;
     }
+
+    fromArray(arr: T[]) {
+        arr.forEach((item) => {
+			this.push(item);
+		});
+        return this;
+    }
+
+    toArray() {
+        const arr = [];
+        let current = this.head;
+        while(current) {
+            arr.push(current.val);
+            current = current.next;
+        }
+        return arr;
+    }
 };
+
+export default SinglyLinkedList;
