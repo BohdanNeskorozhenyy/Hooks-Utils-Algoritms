@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { ARRAYS_CASES } from '../data';
 
 export function sortCommonTest(sortFunction: <T>(arr: T[], comparator: (a: T, b: T) => number) => T[]) {

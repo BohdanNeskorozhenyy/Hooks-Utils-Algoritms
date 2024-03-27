@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 export const ARRAYS_CASES = {
 	SIMPLE: {
 		UNSORTED: [3, 7, 2, 1, 5, 9, 6, 4, 8],
