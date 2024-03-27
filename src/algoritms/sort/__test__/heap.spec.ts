@@ -1,4 +1,4 @@
-import heapSort from "../heap";
-import { sortCommonTest } from "./utils";
+import heapSort from '../heap';
+import { sortCommonTest } from './utils';
 
-sortCommonTest(heapSort)
+sortCommonTest(heapSort);

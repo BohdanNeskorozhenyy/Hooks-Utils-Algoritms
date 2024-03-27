@@ -1,7 +1,7 @@
 function swap <T>(arr: T[], i: number, j: number) {
-    const temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
+	const temp = arr[i];
+	arr[i] = arr[j];
+	arr[j] = temp;
 }
 
 function heapify<T>(
