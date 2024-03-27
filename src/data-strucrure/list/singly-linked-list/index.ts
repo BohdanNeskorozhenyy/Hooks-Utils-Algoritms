@@ -1,12 +1,12 @@
-class _Node<T> {
+class Node<T> {
     constructor(
         public val: T, 
-        public next: _Node<T> | null = null
+        public next: Node<T> | null = null
     ){}
 }
 class SinglyLinkedList<T> {
-    public head: _Node<T> | null = null;
-	public tail: _Node<T> | null = null;
+    public head: Node<T> | null = null;
+	public tail: Node<T> | null = null;
 	public length = 0;
 
 	constructor(array?: T[]) {
@@ -17,7 +17,7 @@ class SinglyLinkedList<T> {
 
     push(val: T) {
         this.length++;
-        const node = new _Node(val);
+        const node = new Node(val);
         if (!this.head) {
             this.head = node;
             this.tail = this.head;
@@ -58,7 +58,7 @@ class SinglyLinkedList<T> {
     }
 
     unshift(value: T) {
-        const newNode = new _Node(value);
+        const newNode = new Node(value);
         if (!this.head) {
             this.head = newNode;
             this.tail = this.head;
@@ -94,7 +94,7 @@ class SinglyLinkedList<T> {
         if (index < 0 || index > this.length) return false;
         if (index === this.length) return !!this.push(val);
         if (index === 0) return !!this.unshift(val);
-        const newNode = new _Node(val)
+        const newNode = new Node(val)
         const prevNode = this.get(index - 1);
         const prevNext = prevNode!.next;
         prevNode!.next = newNode;
