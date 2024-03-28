@@ -9,6 +9,9 @@
 
 A doubly linked list is a type of linked list where each node contains a reference to the next node and the previous node in the sequence. This allows traversal of the list in both forward and backward directions
 
+![image](https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/31d84034-05c5-4769-815a-5d247b2f0c7b)
+
+
 
 ## Key Features
 
