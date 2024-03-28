@@ -1,25 +1,29 @@
-class Node {
-	constructor(val) {
-		this.val = val;
-		this.next = null;
-		this.prev = null;
-	}
+class Node<T> {
+	constructor(
+		public val: T,
+		public next: Node<T> | null = null,
+		public prev: Node<T> | null = null,
+	) {}
 }
 
-class DoublyLinkedList {
-	constructor() {
-		this.head = null;
-		this.tail = null;
-		this.length = 0;
+class DoublyLinkedList<T> {
+	public head: Node<T> | null = null;
+	public tail: Node<T> | null = null;
+	public length = 0;
+
+	constructor(array?: T[]) {
+		if (array) {
+			this.fromArray(array);
+		}
 	}
 
-	push(val) {
+	push(val: T) {
 		const node = new Node(val);
 		if (!this.head) {
 			this.head = node;
 			this.tail = this.head;
 		} else {
-			this.tail.next = node;
+			this.tail!.next = node;
 			node.prev = this.tail;
 			this.tail = node;
 		}
@@ -34,9 +38,9 @@ class DoublyLinkedList {
 			this.head = null;
 			this.tail = null;
 		} else {
-			this.tail = removedNode.prev;
-			this.tail.next = null;
-			removedNode.prev = null;
+			this.tail = removedNode!.prev;
+			this.tail!.next = null;
+			removedNode!.prev = null;
 		}
 		this.length--;
 		return removedNode;
@@ -49,21 +53,21 @@ class DoublyLinkedList {
 			this.head = null;
 			this.tail = null;
 		} else {
-			this.head = oldHead.next;
-			this.head.prev = null;
-			oldHead.next = null;
+			this.head = oldHead!.next;
+			this.head!.prev = null;
+			oldHead!.next = null;
 		}
 		this.length--;
 		return oldHead;
 	}
 
-	unshift(val) {
+	unshift(val: T) {
 		const newNode = new Node(val);
 		if (this.length === 0) {
 			this.head = newNode;
 			this.tail = newNode;
 		} else {
-			this.head.prev = newNode;
+			this.head!.prev = newNode;
 			newNode.next = this.head;
 			this.head = newNode;
 		}
@@ -71,14 +75,14 @@ class DoublyLinkedList {
 		return this;
 	}
 
-	get(index) {
+	get(index: number) {
 		const half = Math.round(this.length / 2);
 		if (index < 0 || index >= this.length) return null;
 		if (half >= index) {
 			let node = this.tail;
 			let counter = this.length - 1;
 			while (counter !== index) {
-				node = node.prev;
+				node = node!.prev;
 				counter--;
 			}
 			return node;
@@ -86,13 +90,13 @@ class DoublyLinkedList {
 		let node = this.head;
 		let counter = 0;
 		while (counter !== index) {
-			node = node.next;
+			node = node!.next;
 			counter++;
 		}
 		return node;
 	}
 
-	set(index, val) {
+	set(index: number, val: T) {
 		const node = this.get(index);
 		if (node) {
 			node.val = val;
@@ -101,36 +105,53 @@ class DoublyLinkedList {
 		return false;
 	}
 
-	insert(index, val) {
+	insert(index: number, val: T) {
 		if (index < 0 || index > this.length) return false;
 		if (index === this.length) return !!this.push(val);
 		if (index === 0) return !!this.unshift(val);
 
 		const newNode = new Node(val);
 		const beforeNode = this.get(index - 1);
-		const afterNode = beforeNode.next;
+		const afterNode = beforeNode!.next;
 
-		beforeNode.next = newNode;
+		beforeNode!.next = newNode;
 		newNode.prev = beforeNode;
-		newNode.next = afterNode;
-		afterNode.prev = newNode;
+		newNode!.next = afterNode;
+		afterNode!.prev = newNode;
 		this.length++;
 		return true;
 	}
 
-	remove(index) {
+	remove(index: number) {
 		if (index < 0 || index >= this.length) return undefined;
 		if (index === 0) return this.shift();
 		if (index === this.length - 1) return this.pop();
 		const removedNode = this.get(index);
-		const beforeNode = removedNode.prev;
-		const afterNode = removedNode.next;
-		beforeNode.next = afterNode;
-		afterNode.prev = beforeNode;
-		removedNode.next = null;
-		removedNode.prev = null;
+		const beforeNode = removedNode!.prev;
+		const afterNode = removedNode!.next;
+		beforeNode!.next = afterNode;
+		afterNode!.prev = beforeNode;
+		removedNode!.next = null;
+		removedNode!.prev = null;
 		this.length--;
 		return removedNode;
+	}
+
+	fromArray(arr: T[]) {
+		arr.forEach((item) => {
+			this.push(item);
+		});
+		return this;
+	}
+
+	toArray() {
+		const arr = [];
+		let current = this.head;
+		while (current) {
+			arr.push(current.val);
+			current = current.next;
+		}
+		return arr;
 	}
 }
 
