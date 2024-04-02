@@ -1,5 +1,12 @@
 # Stack
 
+| Complexity | Big O        |
+| ---------- | ------------ |
+| Insertion  | O(1)         |
+| Removal    | O(1)         |
+| Searching  | O(n)         |
+| Access     | O(n)         |
+
 A stack is a linear data structure that follows the Last In, First Out (LIFO) principle. It is similar to a stack of plates where you can only take the top plate off the stack. Elements can only be inserted or removed from the top of the stack, making it inherently ordered. 
 
 ![Stack Illustration](https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png)
