@@ -29,7 +29,7 @@
 		"no-bitwise": 0,
 		"import/prefer-default-export": "off",
 		"max-len": ["error", { "code": 150 }],
-		"indent": [2, "tab"],
+		"indent": 0,
 		"no-tabs": 0,
 		"lines-between-class-members": 0,
 		"no-useless-constructor": 0,
@@ -41,6 +41,7 @@
 		"@typescript-eslint/no-non-null-assertion": 0,
 		"@typescript-eslint/no-explicit-any": 0,
 		"no-mixed-spaces-and-tabs": 0,
+		"space-before-blocks": 0,
 		"default-param-last": 0,
         "max-classes-per-file": ["error", 2],
 		"import/extensions": [
