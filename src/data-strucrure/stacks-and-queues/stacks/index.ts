@@ -47,6 +47,11 @@ class Stack<T> {
         return this;
     }
 
+    peek() {
+        if (!this.first) return null;
+        return this.first.val;
+    }
+
     toArray(){
         const arr = [];
         let current = this.first;

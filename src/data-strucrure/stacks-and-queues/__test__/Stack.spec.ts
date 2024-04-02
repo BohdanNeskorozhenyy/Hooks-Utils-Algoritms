@@ -21,6 +21,11 @@ describe('Stack', () => {
         expect(stack.last?.val).toBe(1);
     });
 
+    it('should peek', () => {
+        expect(stack.peek()).toBe(3);
+        expect(stack.size).toBe(3);
+    });
+
     it('should convert to array', () => {
         expect(stack.toArray()).toEqual([3, 2, 1]);
     });
