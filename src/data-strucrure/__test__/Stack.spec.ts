@@ -1,4 +1,4 @@
-import Stack from '../stacks';
+import Stack from '../stack';
 
 let stack: Stack<number>;
 
