@@ -7,8 +7,6 @@
 | Searching  | O(n)         |
 | Access     | O(n)         |
 
-# Queue
-
 A queue is a linear data structure that follows the First In, First Out (FIFO) principle. It's similar to a line of people waiting for a service, where the person who arrived first is the first to be served, and new people join at the back of the line. 
 
 ![Queue Illustration](https://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg)
