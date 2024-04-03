@@ -29,4 +29,10 @@ describe('Stack', () => {
     it('should convert to array', () => {
         expect(stack.toArray()).toEqual([3, 2, 1]);
     });
+
+    it('should hav first and last to be equal', () => {
+        const stack = new Stack();
+        stack.push(1);
+        expect(stack.first).toBe(stack.last);
+    });
 });
