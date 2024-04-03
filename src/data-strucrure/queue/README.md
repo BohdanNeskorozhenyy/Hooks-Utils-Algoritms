@@ -30,7 +30,6 @@ A queue is a linear data structure that follows the First In, First Out (FIFO) p
 - **Efficient Insertion and Removal:** Enqueue and dequeue operations have a time complexity of O(1), making them efficient for adding and removing elements.
 - **Concurrency Support:** Queues are commonly used in concurrent programming for task scheduling and inter-thread communication, providing synchronization mechanisms.
 - **Versatile Applications:** Widely used in various computer science applications, including job scheduling, breadth-first search algorithms, and managing resources with limited capacity.
-- **Dynamic Resizing:** Some implementations support dynamic resizing to accommodate changing numbers of elements, providing flexibility and efficiency.
 
 ## Disadvantages:
 
