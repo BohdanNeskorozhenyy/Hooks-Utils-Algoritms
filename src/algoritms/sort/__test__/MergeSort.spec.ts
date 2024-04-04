@@ -1,4 +1,4 @@
-import mergeSort from '../sort/merge-sort';
+import mergeSort from '../merge-sort';
 import { sortCommonTest } from './utils';
 
 sortCommonTest(mergeSort);

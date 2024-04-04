@@ -1,4 +1,4 @@
-import insertionSort from '../sort/insertion-sort';
+import insertionSort from '../insertion-sort';
 import { sortCommonTest } from './utils';
 
 sortCommonTest(insertionSort);
