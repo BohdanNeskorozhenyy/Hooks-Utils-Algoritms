@@ -17,6 +17,22 @@ describe('BinarySearchTree', () => {
         expect(tree.root?.left?.left?.val).toBe(2);
     });
 
+    it('shoud insert object correctly', () => {
+        const tree = new BinarySearchTree<{ name: string; id: number }>((data) => data.id);
+        tree.insert({ name: 'test', id: 10 });
+        expect(tree.root?.val).toEqual({ name: 'test', id: 10 });
+        tree.insert({ name: 'test', id: 15 });
+        expect(tree.root?.right?.val).toEqual({ name: 'test', id: 15 });
+        tree.insert({ name: 'test', id: 5 });
+        expect(tree.root?.left?.val).toEqual({ name: 'test', id: 5 });
+        tree.insert({ name: 'test', id: 20 });
+        expect(tree.root?.right?.right?.val).toEqual({ name: 'test', id: 20 });
+        tree.insert({ name: 'test', id: 6 });
+        expect(tree.root?.left?.right?.val).toEqual({ name: 'test', id: 6 });
+        tree.insert({ name: 'test', id: 2 });
+        expect(tree.root?.left?.left?.val).toEqual({ name: 'test', id: 2 });
+    });
+
     it('shoud increase the count of a value correctly', () => {
         const tree = new BinarySearchTree();
         tree.insert(10);
@@ -27,5 +43,25 @@ describe('BinarySearchTree', () => {
         expect(tree.root?.right?.count).toBe(1);
         tree.insert(15);
         expect(tree.root?.right?.count).toBe(2);
+    });
+
+    it('shoud find a value correctly', () => {
+        const tree = new BinarySearchTree();
+        tree.insert(10);
+        tree.insert(15);
+        tree.insert(5);
+        expect(tree.find(5)?.val).toBe(5);
+    });
+
+    it('shoud find a value correctly with selector', () => {
+        const tree = new BinarySearchTree<{ name: string; id: number }>();
+        tree.insert({ name: 'test', id: 1 });
+        tree.insert({ name: 'test', id: 2 });
+        tree.insert({ name: 'test', id: 3 });
+        tree.insert({ name: 'test', id: 4 });
+        tree.insert({ name: 'test', id: 5 });
+        tree.insert({ name: 'test', id: 6 });
+        const result = tree.find((data) => data?.id === 6);
+        expect(result?.val).toEqual({ name: 'test', id: 6 });
     });
 });
