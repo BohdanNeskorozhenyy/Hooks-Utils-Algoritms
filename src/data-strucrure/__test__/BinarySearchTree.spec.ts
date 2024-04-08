@@ -64,4 +64,26 @@ describe('BinarySearchTree', () => {
         const result = tree.find((data) => data?.id === 6);
         expect(result?.val).toEqual({ name: 'test', id: 6 });
     });
+
+    it('shoud remove a value correctly', () => {
+        const tree = new BinarySearchTree();
+        tree.insert(10);
+        tree.insert(15);
+        tree.insert(5);
+        tree.insert(2);
+        tree.remove(5);
+        expect(tree.find(5)).toBeNull();
+        expect(tree.root?.left?.val).toBe(2);
+    });
+
+    it('shoud remove a value correctly with selector', () => {
+        const tree = new BinarySearchTree<{ name: string; id: number }>((data) => data.id);
+        tree.insert({ name: 'test', id: 10 });
+        tree.insert({ name: 'test', id: 15 });
+        tree.insert({ name: 'test', id: 5 });
+        tree.insert({ name: 'test', id: 2 });
+        tree.remove((data) => data?.id === 5);
+        expect(tree.find((data) => data?.id === 5)).toBeNull();
+        expect(tree.root?.left?.val).toEqual({ name: 'test', id: 2 });
+    });
 });
