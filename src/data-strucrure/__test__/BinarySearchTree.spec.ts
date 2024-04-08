@@ -17,7 +17,7 @@ describe('BinarySearchTree', () => {
         expect(tree.root?.left?.left?.val).toBe(2);
     });
 
-    it('shoud insert object correctly', () => {
+    it('shoud insert value with selector correctly', () => {
         const tree = new BinarySearchTree<{ name: string; id: number }>((data) => data.id);
         tree.insert({ name: 'test', id: 10 });
         expect(tree.root?.val).toEqual({ name: 'test', id: 10 });
