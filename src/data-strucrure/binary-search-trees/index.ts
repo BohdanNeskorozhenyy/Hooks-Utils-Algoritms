@@ -1,4 +1,7 @@
 /* eslint-disable no-constant-condition */
+type TSelector<T> = (val: T) => string | number | boolean | T;
+type TComparator<T> = (val?: T) => boolean;
+
 class Node<T> {
     constructor(
         public val: T,
@@ -12,16 +15,16 @@ function defaultSelector<T>(val: T) {
 }
 class BinarySearchTree<T> {
     public root: Node<T> | null = null;
-    private selector: (val: T) => string | number | boolean | T;
+    private selector: TSelector<T>;
 
-    constructor(selector?: (val: T) => string | number | boolean | T) {
+    constructor(selector?: TSelector<T>) {
         this.selector = selector || defaultSelector;
     }
 
-    private comparator(selector: T | ((val?: T) => boolean), value?: T) {
-        const isSelectorFunction = typeof selector === 'function';
-        const selectorFuntion = selector as (val?: T) => boolean;
-        const comparator = (val?: T) => (isSelectorFunction ? selectorFuntion(val) : selector === val);
+    private comparator(target: T | TComparator<T>, value?: T) {
+        const isSelectorFunction = typeof target === 'function';
+        const targetFunc = target as TComparator<T>;
+        const comparator = (val?: T) => (isSelectorFunction ? targetFunc(val) : target === val);
         return comparator(value);
     }
 
@@ -35,12 +38,12 @@ class BinarySearchTree<T> {
         return current;
     }
 
-    private removeRecursive(root: Node<T> | null, selector: T | ((val?: T) => boolean)) {
+    private removeRecursive(root: Node<T> | null, value: T | TComparator<T>) {
         if (root === null) {
             return null;
         }
 
-        if (this.comparator(selector, root.val)) {
+        if (this.comparator(value, root.val)) {
             if (root.left === null && root.right === null) {
                 return null;
             } if (root.left === null) {
@@ -52,10 +55,10 @@ class BinarySearchTree<T> {
                 root.val = minNode.val;
                 root.right = this.removeRecursive(root.right, minNode.val);
                 return root;
-        } if (!this.comparator(selector, root.val)) {
-            root.left = this.removeRecursive(root.left, selector);
+        } if (!this.comparator(value, root.val)) {
+            root.left = this.removeRecursive(root.left, value);
         } else {
-            root.right = this.removeRecursive(root.right, selector);
+            root.right = this.removeRecursive(root.right, value);
         }
 
         return root;
@@ -89,14 +92,14 @@ class BinarySearchTree<T> {
             }
     }
 
-    find(selector: T | ((val?: T) => boolean)) {
+    find(value: T | TComparator<T>) {
         let current = this.root;
 
         while (current !== null) {
-            if (this.comparator(selector, current.val)) {
+            if (this.comparator(value, current.val)) {
                 return current;
             }
-            if (this.comparator(selector, current.left?.val)) {
+            if (this.comparator(value, current.left?.val)) {
                 current = current.left;
             } else {
                 current = current.right;
@@ -105,8 +108,8 @@ class BinarySearchTree<T> {
         return null;
     }
 
-    remove(selector: T | ((val?: T) => boolean)) {
-		this.root = this.removeRecursive(this.root, selector);
+    remove(value: T | TComparator<T>) {
+		this.root = this.removeRecursive(this.root, value);
 		return this;
 	}
 }
