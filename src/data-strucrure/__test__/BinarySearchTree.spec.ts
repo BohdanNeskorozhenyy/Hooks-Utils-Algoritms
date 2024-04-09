@@ -86,4 +86,24 @@ describe('BinarySearchTree', () => {
         expect(tree.find((data) => data?.id === 5)).toBeNull();
         expect(tree.root?.left?.val).toEqual({ name: 'test', id: 2 });
     });
+
+    it('shoud traverse in order correctly', () => {
+        const tree = new BinarySearchTree();
+        tree.insert(10);
+        tree.insert(15);
+        tree.insert(5);
+        tree.insert(2);
+        expect(tree.bfs()).toEqual([10, 5, 15, 2]);
+    });
+
+    it('shod call callback correctly while traversing', () => {
+        const tree = new BinarySearchTree<number>();
+        const result: number[] = [];
+        tree.insert(10);
+        tree.insert(15);
+        tree.insert(5);
+        tree.insert(2);
+        tree.bfs((val) => result.push(val * 2));
+        expect(result).toEqual([20, 10, 30, 4]);
+    });
 });

@@ -1,4 +1,6 @@
 /* eslint-disable no-constant-condition */
+import Queue from '../queue';
+
 type TSelector<T> = (val: T) => string | number | boolean | T;
 type TComparator<T> = (val?: T) => boolean;
 
@@ -112,6 +114,28 @@ class BinarySearchTree<T> {
 		this.root = this.removeRecursive(this.root, value);
 		return this;
 	}
+
+    bfs(callback?: (val: T) => any): T[] {
+        if (!this.root) return [];
+        const arr = [];
+        const queue = new Queue<Node<T>>();
+        queue.enqueue(this.root);
+
+        while (queue.size) {
+            const node = queue.dequeue();
+            if (node!.left) {
+                queue.enqueue(node!.left);
+            }
+            if (node!.right) {
+                queue.enqueue(node!.right);
+            }
+            if (callback) {
+                callback(node!.val);
+            }
+            arr.push(node!.val);
+        }
+        return arr;
+    }
 }
 
 export default BinarySearchTree;

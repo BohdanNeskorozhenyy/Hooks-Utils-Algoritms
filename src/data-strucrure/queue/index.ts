@@ -34,7 +34,7 @@ class Queue<T> {
         if (this.first === this.last) {
             this.first = null;
         }
-        this.first = this.first!.next;
+        this.first = this.first?.next || null;
         this.size--;
         return removedNode.val;
     }
