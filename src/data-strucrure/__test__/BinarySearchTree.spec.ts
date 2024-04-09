@@ -1,4 +1,4 @@
-import BinarySearchTree from '../binary-search-trees';
+import BinarySearchTree from '../binary-search-tree';
 
 describe('BinarySearchTree', () => {
     it('should insert a value correctly', () => {
