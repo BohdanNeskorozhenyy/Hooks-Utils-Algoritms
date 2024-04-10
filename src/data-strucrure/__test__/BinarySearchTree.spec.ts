@@ -87,7 +87,7 @@ describe('BinarySearchTree', () => {
         expect(tree.root?.left?.val).toEqual({ name: 'test', id: 2 });
     });
 
-    it('shoud traverse in order correctly', () => {
+    it('shoud run bfs correctly', () => {
         const tree = new BinarySearchTree();
         tree.insert(10);
         tree.insert(15);
@@ -96,7 +96,7 @@ describe('BinarySearchTree', () => {
         expect(tree.bfs()).toEqual([10, 5, 15, 2]);
     });
 
-    it('shod call callback correctly while traversing', () => {
+    it('shoud call callback correctly while runing bfs', () => {
         const tree = new BinarySearchTree<number>();
         const result: number[] = [];
         tree.insert(10);
@@ -105,5 +105,29 @@ describe('BinarySearchTree', () => {
         tree.insert(2);
         tree.bfs((val) => result.push(val * 2));
         expect(result).toEqual([20, 10, 30, 4]);
+    });
+
+    it('shoud run dfsPreOrder correctly', () => {
+        const tree = new BinarySearchTree<number>();
+        tree.insert(10);
+        tree.insert(15);
+        tree.insert(6);
+        tree.insert(8);
+        tree.insert(3);
+        tree.insert(20);
+        expect(tree.dfsPreOrder()).toEqual([10, 6, 3, 8, 15, 20]);
+    });
+
+    it('call callback correctly while runing dfsPreOrder', () => {
+        const tree = new BinarySearchTree<number>();
+        const result: number[] = [];
+        tree.insert(10);
+        tree.insert(15);
+        tree.insert(6);
+        tree.insert(8);
+        tree.insert(3);
+        tree.insert(20);
+        tree.dfsPreOrder((val) => result.push(val * 2));
+        expect(result).toEqual([20, 12, 6, 16, 30, 40]);
     });
 });

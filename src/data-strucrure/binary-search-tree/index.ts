@@ -117,7 +117,7 @@ class BinarySearchTree<T> {
 
     bfs(callback?: (val: T) => any): T[] {
         if (!this.root) return [];
-        const arr = [];
+        const arr: T[] = [];
         const queue = new Queue<Node<T>>();
         queue.enqueue(this.root);
 
@@ -134,6 +134,19 @@ class BinarySearchTree<T> {
             }
             arr.push(node!.val);
         }
+        return arr;
+    }
+
+    dfsPreOrder(callback?: (val: T) => any): T[] {
+        if (!this.root) return [];
+        const arr: T[] = [];
+        function traverse(node: Node<T>){
+            arr.push(node.val);
+            if (callback) callback(node.val);
+            if (node.left) traverse(node.left);
+            if (node.right) traverse(node.right);
+        }
+        traverse(this.root);
         return arr;
     }
 }
