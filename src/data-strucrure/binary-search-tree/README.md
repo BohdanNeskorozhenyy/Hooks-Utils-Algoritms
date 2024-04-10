@@ -32,3 +32,21 @@ A binary search tree (BST) is a hierarchical data structure commonly used to org
 4. **File System Organization**: Binary search trees can be employed in file systems to efficiently organize directory structures, facilitating quick lookup and traversal of files and directories.
 
 5. **Range Queries**: BSTs can be used to efficiently perform range queries, such as finding all elements within a given range, by leveraging their sorted nature and traversal algorithms.
+
+
+
+## BFS (Breadth First Search) VS DFS (Depth First Search)
+
+1. **Time Complexity**:
+    - Both BFS and DFS have a time complexity of O(V + E), where V is the number of vertices and E is the number of edges in the graph. This is because both algorithms visit every vertex and every edge once.
+
+2. **Space Complexity**:
+    - BFS:
+        - In the worst-case scenario, where the graph is represented using an adjacency list, the space complexity of BFS is O(V) since it requires a queue to store vertices to be visited. This queue can potentially contain all vertices of the graph.
+        - In the best-case scenario, where the graph is represented using an adjacency list, the space complexity of BFS is O(1) since the queue is not used.
+    - DFS:
+        - The space complexity of DFS depends on the implementation:
+            - If the graph is represented using an adjacency list and a recursive implementation is used, the space complexity is O(V) due to the recursion stack. In the worst case, the recursion stack can go as deep as the number of vertices in the graph.
+            - If an iterative implementation is used along with an explicit stack, the space complexity can be O(V) as well, as the stack might contain all vertices in the worst case, similar to BFS.
+
+Overall, while both BFS and DFS have the same time complexity, their space complexity can vary depending on the structure of the graph and the implementation details.
