@@ -166,6 +166,21 @@ class BinarySearchTree<T> {
         traverse(this.root);
         return arr;
     }
+
+    dfsInOrder(callback?: (val: T) => any): T[] {
+        if (!this.root) return [];
+        const arr: T[] = [];
+
+        function traverse(node: Node<T>){
+            if (node.left) traverse(node.left);
+            arr.push(node.val);
+            if (callback) callback(node.val);
+            if (node.right) traverse(node.right);
+        }
+
+        traverse(this.root);
+        return arr;
+    }
 }
 
 export default BinarySearchTree;

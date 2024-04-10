@@ -154,4 +154,28 @@ describe('BinarySearchTree', () => {
         tree.dfsPostOrder((val) => result.push(val * 2));
         expect(result).toEqual([6, 16, 12, 40, 30, 20]);
     });
+
+    it('shoud run dfsInOrder correctly', () => {
+        const tree = new BinarySearchTree<number>();
+        tree.insert(10);
+        tree.insert(15);
+        tree.insert(6);
+        tree.insert(8);
+        tree.insert(3);
+        tree.insert(20);
+        expect(tree.dfsInOrder()).toEqual([3, 6, 8, 10, 15, 20]);
+    });
+
+    it('shoud call callback correctly while runing dfsInOrder', () => {
+        const tree = new BinarySearchTree<number>();
+        const result: number[] = [];
+        tree.insert(10);
+        tree.insert(15);
+        tree.insert(6);
+        tree.insert(8);
+        tree.insert(3);
+        tree.insert(20);
+        tree.dfsInOrder((val) => result.push(val * 2));
+        expect(result).toEqual([6, 12, 16, 20, 30, 40]);
+    });
 });
