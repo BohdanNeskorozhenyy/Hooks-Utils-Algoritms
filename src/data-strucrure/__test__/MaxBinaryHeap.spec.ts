@@ -14,7 +14,7 @@ describe('MaxBinaryHeap', () => {
         expect(heap.values).toEqual([120, 50, 100, 36, 40, 19]);
     });
 
-    it('shoud insert a object value correctly', () => {
+    it('shoud insert a value correctly with selector', () => {
         const heap = new MaxBinaryHeap<{ name: string; id: number }>((data) => data.id);
         heap.insert({ name: 'test', id: 100 });
         heap.insert({ name: 'test', id: 36 });
