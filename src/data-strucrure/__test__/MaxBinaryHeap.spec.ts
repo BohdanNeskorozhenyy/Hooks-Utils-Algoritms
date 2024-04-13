@@ -13,4 +13,35 @@ describe('MaxBinaryHeap', () => {
         heap.insert(120);
         expect(heap.values).toEqual([120, 50, 100, 36, 40, 19]);
     });
+
+    it('shoud insert a object value correctly', () => {
+        const heap = new MaxBinaryHeap<{ name: string; id: number }>((data) => data.id);
+        heap.insert({ name: 'test', id: 100 });
+        heap.insert({ name: 'test', id: 36 });
+        heap.insert({ name: 'test', id: 19 });
+        heap.insert({ name: 'test', id: 40 });
+        expect(heap.values).toEqual([
+            { name: 'test', id: 100 },
+            { name: 'test', id: 40 },
+            { name: 'test', id: 19 },
+            { name: 'test', id: 36 },
+        ]);
+        heap.insert({ name: 'test', id: 50 });
+        expect(heap.values).toEqual([
+            { name: 'test', id: 100 },
+            { name: 'test', id: 50 },
+            { name: 'test', id: 19 },
+            { name: 'test', id: 36 },
+            { name: 'test', id: 40 },
+        ]);
+        heap.insert({ name: 'test', id: 120 });
+        expect(heap.values).toEqual([
+            { name: 'test', id: 120 },
+            { name: 'test', id: 50 },
+            { name: 'test', id: 100 },
+            { name: 'test', id: 36 },
+            { name: 'test', id: 40 },
+            { name: 'test', id: 19 },
+        ]);
+    });
 });
