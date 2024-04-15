@@ -44,4 +44,42 @@ describe('MaxBinaryHeap', () => {
             { name: 'test', id: 19 },
         ]);
     });
+
+    it('should extract the max value correctly', () => {
+        const heap = new MaxBinaryHeap();
+        heap.insert(100);
+        heap.insert(90);
+        heap.insert(95);
+        heap.insert(80);
+        heap.insert(57);
+        heap.insert(91);
+        heap.insert(80);
+        expect(heap.extractMax()).toBe(100);
+        expect(heap.extractMax()).toBe(95);
+        expect(heap.extractMax()).toBe(91);
+        expect(heap.extractMax()).toBe(90);
+        expect(heap.extractMax()).toBe(80);
+        expect(heap.extractMax()).toBe(80);
+        expect(heap.extractMax()).toBe(57);
+        expect(heap.values).toEqual([]);
+    });
+
+    it('shoud extract the max value with selector correctly', () => {
+        const heap = new MaxBinaryHeap<{ name: string; id: number }>((data) => data.id);
+        heap.insert({ name: 'test', id: 100 });
+        heap.insert({ name: 'test', id: 90 });
+        heap.insert({ name: 'test', id: 95 });
+        heap.insert({ name: 'test', id: 80 });
+        heap.insert({ name: 'test', id: 57 });
+        heap.insert({ name: 'test', id: 91 });
+        heap.insert({ name: 'test', id: 80 });
+        expect(heap.extractMax()?.id).toBe(100);
+        expect(heap.extractMax()?.id).toBe(95);
+        expect(heap.extractMax()?.id).toBe(91);
+        expect(heap.extractMax()?.id).toBe(90);
+        expect(heap.extractMax()?.id).toBe(80);
+        expect(heap.extractMax()?.id).toBe(80);
+        expect(heap.extractMax()?.id).toBe(57);
+        expect(heap.values).toEqual([]);
+    });
 });
