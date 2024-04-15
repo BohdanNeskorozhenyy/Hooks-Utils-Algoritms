@@ -50,12 +50,12 @@ class MaxBinaryHeap<T> {
             };
 
             const left = {
-                value: this.selector(this.values[2 * index + 1] || {} as T),
+                value: this.values[2 * index + 1] ? this.selector(this.values[2 * index + 1]) : 0,
                 index: 2 * index + 1,
             };
 
             const right = {
-                value: this.selector(this.values[2 * index + 2] || {} as T),
+                value: this.values[2 * index + 2] ? this.selector(this.values[2 * index + 2]) : 0,
                 index: 2 * index + 2,
             };
             if (left.value > root.value && right.value > root.value) {
