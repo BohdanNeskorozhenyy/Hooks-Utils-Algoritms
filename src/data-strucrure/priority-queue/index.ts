@@ -1,16 +1,12 @@
-type TSelector<T> = (val: T) => string | number | boolean | T;
-
-function defaultSelector<T>(val: T) {
-    return val;
+class Node<T> {
+    constructor(
+        public val: T,
+        public priority: number,
+    ) {}
 }
 
-class MaxBinaryHeap<T> {
-    public values: T[] = [];
-    private selector: TSelector<T>;
-
-    constructor(selector?: TSelector<T>) {
-        this.selector = selector || defaultSelector;
-    }
+class PriorityQueue<T> {
+    public values: Node<T>[] = [];
 
     private swap(index1: number, index2: number){
         const temp = this.values[index1];
@@ -25,7 +21,7 @@ class MaxBinaryHeap<T> {
             const parentIndex = Math.floor((index - 1) / 2);
             const parent = this.values[parentIndex];
 
-            if (this.selector(element) <= this.selector(parent)) break;
+            if (element.priority <= parent.priority) break;
 
             this.swap(parentIndex, index);
             index = parentIndex;
@@ -37,17 +33,17 @@ class MaxBinaryHeap<T> {
         let index = 0;
         while (index < this.values.length) {
             const root = {
-                value: this.selector(this.values[index]),
+                value: this.values[index].priority,
                 index,
             };
 
             const left = {
-                value: this.values[2 * index + 1] ? this.selector(this.values[2 * index + 1]) : 0,
+                value: this.values[2 * index + 1]?.priority || 0,
                 index: 2 * index + 1,
             };
 
             const right = {
-                value: this.values[2 * index + 2] ? this.selector(this.values[2 * index + 2]) : 0,
+                value: this.values[2 * index + 2]?.priority || 0,
                 index: 2 * index + 2,
             };
             if (left.value > root.value && right.value > root.value) {
@@ -66,12 +62,13 @@ class MaxBinaryHeap<T> {
         }
     }
 
-    insert(val: T) {
-        this.values.push(val);
+    enqueue(val: T, priority: number) {
+        const newNode = new Node(val, priority);
+        this.values.push(newNode);
         this.bubbleUp();
     }
 
-    extractMax() {
+    dequeue() {
         this.swap(0, this.values.length - 1);
         const removedValue = this.values.pop();
         this.bubbleDown();
@@ -79,4 +76,4 @@ class MaxBinaryHeap<T> {
     }
 }
 
-export default MaxBinaryHeap;
+export default PriorityQueue;
