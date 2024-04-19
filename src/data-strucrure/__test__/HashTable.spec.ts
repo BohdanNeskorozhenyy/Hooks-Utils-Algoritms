@@ -1,4 +1,4 @@
-import HashTable from '../HashTable';
+import HashTable from '../hash-table';
 
 describe('HashTable', () => {
     it('should correctly set and get values', () => {
