@@ -11,8 +11,8 @@
 | Depth First Search| O(V + E)        |
 | Breadth First Search| O(V + E)      |
 
-![image](https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/cd3dfd09-66f1-45ce-a1aa-846f0498ee69)
 
+<img width="1141" alt="Screenshot 2024-05-01 at 16 49 15" src="https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/3054a53e-52d8-4ca7-810e-565de2645d05">
 
 ## Description
 
