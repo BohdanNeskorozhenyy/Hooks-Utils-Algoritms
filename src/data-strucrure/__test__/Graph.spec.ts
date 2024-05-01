@@ -72,4 +72,8 @@ describe('Graph', () => {
     it('Shoud traverse by DFS iterative correctly', () => {
         expect(graph.dfs('A')).toEqual(['A', 'C', 'E', 'F', 'D', 'B']);
     });
+
+    it('Shoud traverse by BFS correctly', () => {
+        expect(graph.bfs('A')).toEqual(['A', 'B', 'C', 'D', 'E', 'F']);
+    });
 });

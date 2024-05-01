@@ -1,4 +1,5 @@
 import Stack from '../stack';
+import Queue from '../queue';
 
 class Graph {
     public adjacencyList: { [key: string]: string[] } = {};
@@ -68,6 +69,24 @@ class Graph {
             return this.DFSIterative(start);
         }
         return [];
+    }
+
+    bfs(start: string) {
+        const Q = new Queue<string>();
+        const result: string[] = [];
+        const visited: Record<string, boolean> = {};
+        let verteks: string | null;
+
+        Q.enqueue(start);
+        while (Q.size) {
+            verteks = Q.dequeue();
+            if (verteks && !visited[verteks]) {
+                visited[verteks] = true;
+                result.push(verteks);
+                this.adjacencyList[verteks].forEach((n) => Q.enqueue(n));
+            }
+        }
+        return result;
     }
 }
 
