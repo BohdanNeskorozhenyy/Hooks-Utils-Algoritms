@@ -1,12 +1,17 @@
 import HashTable from '../hash-table';
 
 describe('HashTable', () => {
-    it('should correctly set and get values', () => {
-        const hashTable = new HashTable(53);
+    let hashTable: HashTable;
+
+    beforeEach(() => {
+        hashTable = new HashTable(53);
         hashTable.set('foo', 'bar1');
         hashTable.set('foo1', 'bar2');
         hashTable.set('foo2', 'bar3');
         hashTable.set('foo3', 'bar4');
+    });
+
+    it('should correctly set and get values', () => {
         expect(hashTable.get('foo')).toBe('bar1');
         expect(hashTable.get('foo1')).toBe('bar2');
         expect(hashTable.get('foo2')).toBe('bar3');
@@ -14,7 +19,7 @@ describe('HashTable', () => {
         expect(hashTable.get('foo4')).toBe(undefined);
     });
 
-    it('shoud save and get correctly keys with same hash index', () => {
+    it('should save and get correctly keys with same hash index', () => {
         const hashTable = new HashTable(17);
         hashTable.set('maroon', 'bar1');
         hashTable.set('yellow', 'bar2');
@@ -23,11 +28,6 @@ describe('HashTable', () => {
     });
 
     it('should correctly return all keys', () => {
-        const hashTable = new HashTable(53);
-        hashTable.set('foo', 'bar1');
-        hashTable.set('foo1', 'bar2');
-        hashTable.set('foo2', 'bar3');
-        hashTable.set('foo3', 'bar4');
         const keys = hashTable.keys();
         expect(keys).toBeInstanceOf(Array);
         expect(keys).toContain('foo');
@@ -36,12 +36,7 @@ describe('HashTable', () => {
         expect(keys).toContain('foo3');
     });
 
-    it('should correctly return all keys', () => {
-        const hashTable = new HashTable(53);
-        hashTable.set('foo', 'bar1');
-        hashTable.set('foo1', 'bar2');
-        hashTable.set('foo2', 'bar3');
-        hashTable.set('foo3', 'bar4');
+    it('should correctly return all values', () => {
         const values = hashTable.values();
         expect(values).toBeInstanceOf(Array);
         expect(values).toContain('bar1');

@@ -44,6 +44,7 @@
 		"space-before-blocks": 0,
 		"default-param-last": 0,
         "max-classes-per-file": ["error", 2],
+		"consistent-return": 0,
 		"import/extensions": [
 			"error",
 			"ignorePackages",
