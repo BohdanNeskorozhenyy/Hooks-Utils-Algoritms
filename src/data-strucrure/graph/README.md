@@ -11,6 +11,9 @@
 | Depth First Search| O(V + E)        |
 | Breadth First Search| O(V + E)      |
 
+![image](https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/cd3dfd09-66f1-45ce-a1aa-846f0498ee69)
+
+
 ## Description
 
 A graph is a non-linear data structure that consists of a set of vertices (nodes) and a set of edges connecting these vertices. Graphs are widely used to represent relationships between objects. They are particularly useful for modeling networks, such as social networks, transportation networks, computer networks, etc.
