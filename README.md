@@ -1,5 +1,25 @@
 ## The draft was created while reading the book "Grokking Algorithms. An Illustrated Guide for Programmers and Other Curious"
 
+ - [Algoritms](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms)
+    - [Binary Search](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms/list-search/binary-search)
+    - [Linear search](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms/list-search/linear-search)
+    - [Bubble Sort](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms/sort/bubble-sort)
+    - [Heap Sort](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms/sort/heap)
+    - [Insertion Sort](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms/sort/insertion-sort)
+    - [Merge Sort](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms/sort/merge-sort)
+    - [Quick Sort](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms/sort/quick-sort)
+    - [Selection Sort](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms/sort/selection-sort)
+ - [Data strucrure](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure)
+    - [Binary Search Tree](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/binary-search-tree)
+    - [Doubly linked list](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/doubly-linked-list)
+    - [Graph](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/graph)
+    - [Hash Table](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/hash-table)
+    - [Binary Heap](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/max-binary-heap)
+    - [Priority Queue](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/priority-queue)
+    - [Queue](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/queue)
+    - [Singly linked list](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/singly-linked-list)
+    - [Stack](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/stack)
+
 ### Big O
 ![Logarithmic-time-complexity-blog-1](https://github.com/neskor-b/Algoritms-and-data-structure/assets/89013557/131f70b1-0b83-4456-b9db-5dfe770eedac)
 
