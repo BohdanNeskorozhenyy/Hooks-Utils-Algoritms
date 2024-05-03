@@ -13,7 +13,7 @@
     - [Binary Search Tree](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/binary-search-tree)
     - [Doubly linked list](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/doubly-linked-list)
     - [Graph](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/graph)
-    - [Waighted Graph (with Dijkstra)](https://github.com/neskor-b/Algoritms-and-data-structure/blob/main/src/data-strucrure/waighted-graph/index.ts)
+    - [Waighted Graph](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/waighted-graph)
     - [Hash Table](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/hash-table)
     - [Binary Heap](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/max-binary-heap)
     - [Priority Queue](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/priority-queue)
