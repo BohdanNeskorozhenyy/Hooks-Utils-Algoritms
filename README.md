@@ -9,6 +9,7 @@
     - [Merge Sort](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms/sort/merge-sort)
     - [Quick Sort](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms/sort/quick-sort)
     - [Selection Sort](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/algoritms/sort/selection-sort)
+    - [Dijkstra's](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/waighted-graph)
  - [Data strucrure](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure)
     - [Binary Search Tree](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/binary-search-tree)
     - [Doubly linked list](https://github.com/neskor-b/Algoritms-and-data-structure/tree/main/src/data-strucrure/doubly-linked-list)
